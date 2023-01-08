@@ -1,0 +1,107 @@
+@font-face {
+    font-family: f1;
+    src: url(../fonts/grenouille-cyr.ttf);
+}
+
+@font-face {
+    font-family: f2;
+    src: url(../fonts/kabarett-decor-demo-thin\ \(1\).otf);
+}
+
+@font-face {
+    font-family: f3;
+    src: url(../fonts/snowcapcyr.otf);
+}
+div{
+    box-sizing: border-box;
+}
+body{
+    background: #123;
+}
+
+/*========================================================================================*/
+#stars{
+    width: 3px;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 50%;
+    transform-origin: 0 0;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    animation: rotate 270s infinite linear;
+}
+
+@keyframes rotate{
+    0% {
+       transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/*=========================================================*/
+.p{
+    text-align: center;
+    font-family: f2;
+    text-transform: uppercase;
+    font-size: 45px;
+    color: aqua;
+    animation: anim 2s linear infinite;
+    letter-spacing: 3px;
+}
+
+@keyframes anim{
+    0%{color: bisque;}
+
+    25%{color: rgb(206, 245, 143);}
+
+    50%{color: skyblue;}
+
+    75%{color: rgb(161, 136, 136);}
+
+    100%{color: rgb(214, 206, 129);}
+}
+
+
+
+
+#container{
+    border: 5px dotted #fff;
+    width: 300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#container div{
+    width: 150px;
+}
+div img{
+width: 140px;
+height: 140px;
+border-radius: 50%;
+margin-bottom: 10px;
+box-shadow: 0 0 35px #fff;
+cursor: pointer;
+transition: 0.3s;
+}
+
+
+
+
+
+div img:hover{
+transform : scale(1.05, 1.05);
+transition: 0.5s;
+} 
+
+#container div:first-child {
+    text-align: center;
+    font-family: f1;
+    font-size: 29px;
+    animation: anim 5s linear infinite;
+}
